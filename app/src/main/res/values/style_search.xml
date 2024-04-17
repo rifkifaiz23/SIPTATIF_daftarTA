@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/black</item>"<!-- Ubah ukuran teks hint sesuai kebutuhan -->
+    </style>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cyan"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comicneue_regular"
+        android:text="SIPTATIF"
+        android:textAlignment="textStart"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:textSize="36dp">
+    </TextView>
+
+    <TextView
+        android:text="Sistem Informasi Pendaftaran Tugas Akhir Mahasiswa Teknik Informatika"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/comicneue_regular"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textAlignment="textStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/comicneue_regular"
+        android:justificationMode="inter_word"
+        android:text="Lorem ipsum dolor sit amet consectetur adipisicing elit.  Sequi libero quasi placeat fugiat commodi, quos eveniet soluta fuga. Facilis exercitationem molestiae sunt laudantium magni illo odit amet, veritatis hic excepturi!"
+        android:textSize="12sp">
+    </TextView>
+
+    <TextView
+        android:fontFamily="@font/comicneue_regular"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="18dp"
+        android:textSize="12sp"
+        android:justificationMode="inter_word"
+        android:text="Lorem ipsum dolor sit amet consectetur adipisicing elit.  Sequi libero quasi placeat fugiat commodi, quos eveniet soluta fuga. Facilis exercitationem molestiae sunt laudantium magni illo odit amet, veritatis hic excepturi!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/kembali"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/boldcyan"
+        android:textColor="@color/black"
+        android:fontFamily="@font/comicneue_regular"
+        android:text="kembali"
+        android:textSize="10sp">
+    </Button>
+
+</LinearLayout>

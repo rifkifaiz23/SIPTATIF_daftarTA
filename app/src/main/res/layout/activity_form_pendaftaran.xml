@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cyan"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--- Top Layout -->
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/siptatif_icon">
+                </ImageView>
+
+                <TextView
+                    android:text="SIPTATIF"
+
+                    android:id="@+id/siptatif"
+                    android:fontFamily="@font/comicneue_bold"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <ImageView
+                    android:layout_marginStart="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profile_email">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/comicneue_regular"
+                    android:padding="2dp"
+                    android:text="Mahasiswa"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="12sp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--- Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_above="@+id/bottomNavigationView"
+            android:layout_below="@id/top_layout"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--- Title Layout -->
+                <FrameLayout
+                    android:id="@+id/title"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_form">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Pendaftaran Tugas Akhir"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+                <!--- Content -->
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="3dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <!--- Jenis Pendaftaran -->
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Jenis Pendaftaran"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/HintTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    app:boxCornerRadiusBottomEnd="5dp"
+                                    app:boxCornerRadiusBottomStart="5dp"
+                                    app:boxCornerRadiusTopEnd="5dp"
+                                    app:boxCornerRadiusTopStart="5dp"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxStrokeColor="#4E4A4A"
+                                    app:boxStrokeWidth="1dp"
+                                    android:hint="Jenis Pendaftaran"
+                                    >
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/jenis_pendaftaran"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="text"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp"
+                                        android:textStyle="normal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--- Nama Mahasiswa -->
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Nama Mahasiswa"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_width="match_parent"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/HintTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    app:boxCornerRadiusBottomEnd="5dp"
+                                    app:boxCornerRadiusBottomStart="5dp"
+                                    app:boxCornerRadiusTopEnd="5dp"
+                                    app:boxCornerRadiusTopStart="5dp"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxStrokeColor="#4E4A4A"
+                                    app:boxStrokeWidth="1dp"
+                                    android:hint="Nama Mahasiswa"
+                                    app:hintTextColor="@color/white">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/nama_mahasiswa"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="textPersonName"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp"
+                                        android:textStyle="normal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--- Email Mahasiswa -->
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Email Mahasiswa"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_width="match_parent"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/HintTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    app:boxCornerRadiusBottomEnd="5dp"
+                                    app:boxCornerRadiusBottomStart="5dp"
+                                    app:boxCornerRadiusTopEnd="5dp"
+                                    app:boxCornerRadiusTopStart="5dp"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxStrokeColor="#4E4A4A"
+                                    app:boxStrokeWidth="1dp"
+                                    app:hintTextColor="@color/white"
+                                    android:hint="Email Mahasiswa">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/email_mahasiswa"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="textEmailAddress"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp"
+                                        android:textStyle="normal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--- Nim Mahasiswa -->
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Nim Mahasiswa"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/HintTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    app:boxCornerRadiusBottomEnd="5dp"
+                                    app:boxCornerRadiusBottomStart="5dp"
+                                    app:boxCornerRadiusTopEnd="5dp"
+                                    app:boxCornerRadiusTopStart="5dp"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxStrokeColor="#4E4A4A"
+                                    app:boxStrokeWidth="1dp"
+                                    app:hintTextColor="@color/white"
+                                    android:hint="Nim Mahasiswa">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/nim_mahasiswa"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="text|number"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp"
+                                        android:textStyle="normal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--- Judul Tugas Akhir -->
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Judul Tugas Akhir"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/HintTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    app:boxCornerRadiusBottomEnd="5dp"
+                                    app:boxCornerRadiusBottomStart="5dp"
+                                    app:boxCornerRadiusTopEnd="5dp"
+                                    app:boxCornerRadiusTopStart="5dp"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxStrokeColor="#4E4A4A"
+                                    app:boxStrokeWidth="1dp"
+                                    app:hintTextColor="@color/white"
+                                    android:hint="Judul TA">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/judulTA"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="text"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp"
+                                        android:textStyle="normal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--- Kategori TA -->
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Kategori TA"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_width="match_parent"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/HintTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    app:boxCornerRadiusBottomEnd="5dp"
+                                    app:boxCornerRadiusBottomStart="5dp"
+                                    app:boxCornerRadiusTopEnd="5dp"
+                                    app:boxCornerRadiusTopStart="5dp"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxStrokeColor="#4E4A4A"
+                                    app:boxStrokeWidth="1dp"
+                                    app:hintTextColor="@color/white"
+                                    android:hint="Kategori TA">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/kategoriTA"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="text"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp"
+                                        android:textStyle="normal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--- Calon Dospem 1-->
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Calon Dosen Pembimbing 1"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/HintTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    app:boxCornerRadiusBottomEnd="5dp"
+                                    app:boxCornerRadiusBottomStart="5dp"
+                                    app:boxCornerRadiusTopEnd="5dp"
+                                    app:boxCornerRadiusTopStart="5dp"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxStrokeColor="#4E4A4A"
+                                    app:boxStrokeWidth="1dp"
+                                    app:hintTextColor="@color/white"
+                                    android:hint="Calon Dosen Pembimbing 1">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/calonDospem1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="text"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp"
+                                        android:textStyle="normal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--- Calon Dospem 2-->
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Calon Dosen Pembimbing 2"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/HintTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginEnd="30dp"
+                                    app:boxCornerRadiusBottomEnd="5dp"
+                                    app:boxCornerRadiusBottomStart="5dp"
+                                    app:boxCornerRadiusTopEnd="5dp"
+                                    app:boxCornerRadiusTopStart="5dp"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxStrokeColor="#4E4A4A"
+                                    app:boxStrokeWidth="1dp"
+                                    app:hintTextColor="@color/white"
+                                    android:hint="Kategori TA">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/calonDospem2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:inputType="text"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp"
+                                        android:textStyle="normal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--- Berkas-->
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Berkas"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/comicneue_regular"
+                                android:layout_marginStart="30dp"
+                                android:textColor="@color/black"
+                                android:layout_marginEnd="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/choosefile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/boldcyan"
+                            android:fontFamily="@font/comicneue_regular"
+                            android:text="choose file"
+                            android:textColor="@color/black"
+                            android:textSize="13sp">
+                        </Button>
+                        <TextView
+                            android:text="Format yang diperbolehkan : PDF"
+                            android:fontFamily="@font/comicneue_regular"
+                            android:textSize="13sp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="50dp">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp">
+                    <Button
+                        android:id="@+id/batal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:backgroundTint="@color/boldcyan"
+                        android:fontFamily="@font/comicneue_regular"
+                        android:text="Batal"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+
+                    <Button
+                        android:id="@+id/kirim"
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/boldcyan"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/comicneue_regular"
+                        android:text="Kirim"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <!--- Bottom Navigasi -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/beranda"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/home">
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/beranda_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Beranda"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/pendaftaran"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/register">
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/pendaftaran_text"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Pendaftaran"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/dospem"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/dospem_menus">
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/dospem_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dosen Pembimbing"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/status"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/status">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/status_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status Pendaftaran"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </RelativeLayout>
+</LinearLayout>
